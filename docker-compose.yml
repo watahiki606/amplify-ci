@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  app:
+    container_name: amplify-test-dev-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/amplify-test
+      - ~/.aws:/root/.aws
+      - ~/.ssh:/root/.ssh
+    networks:
+      - app-net
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+networks:
+  app-net:
+    driver: bridge

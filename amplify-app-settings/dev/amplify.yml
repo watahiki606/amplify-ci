@@ -1,0 +1,28 @@
+version: 1
+backend:
+  phases:
+    build:
+      commands:
+        - ln -fs /usr/local/bin/pip3.8 /usr/bin/pip3
+        - ln -fs /usr/local/bin/python3.8 /usr/bin/python3
+        - pip3 install --user pipenv
+        - '# Execute Amplify CLI with the helper script'
+        - amplifyPush --simple
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+        - amplify codegen
+        - npm run test -- --watchAll=false
+    build:
+      commands:
+        - export NODE_OPTIONS=--openssl-legacy-provider  
+        - npm run build
+  artifacts:
+    baseDirectory: build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
