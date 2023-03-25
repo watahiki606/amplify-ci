@@ -23,7 +23,7 @@ export function override(resources: AmplifyRootStackTemplate) {
             Action: [
               "logs:CreateLogStream",
               "logs:CreateLogGroup",
-              "logs:DescribeLogStreams",
+              //   "logs:DescribeLogStreams",
             ],
             Resource: `arn:aws:logs:*:*:log-group:*`,
           },
@@ -37,5 +37,5 @@ export function override(resources: AmplifyRootStackTemplate) {
       policyName: "amplifyLoggerCWLogsPolicy",
     },
   ];
-  console.log("unauthRole", unauthRole);
+  console.log("unauthRole", unauthRole.policies);
 }
