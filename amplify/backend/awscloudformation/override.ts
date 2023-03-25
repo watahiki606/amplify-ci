@@ -6,6 +6,7 @@ export function override(resources: AmplifyRootStackTemplate) {
   const basePolicies = Array.isArray(unauthRole.policies)
     ? unauthRole.policies
     : [unauthRole.policies];
+  unauthRole.roleName = "myCustomUnauthRole";
   unauthRole.policies = [
     ...basePolicies,
 
@@ -23,7 +24,7 @@ export function override(resources: AmplifyRootStackTemplate) {
             Action: [
               "logs:CreateLogStream",
               "logs:CreateLogGroup",
-              //   "logs:DescribeLogStreams",
+              "logs:DescribeLogStreams",
             ],
             Resource: `arn:aws:logs:*:*:log-group:*`,
           },
