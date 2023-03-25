@@ -2,6 +2,7 @@ import { AmplifyRootStackTemplate } from "@aws-amplify/cli-extensibility-helper"
 
 export function override(resources: AmplifyRootStackTemplate) {
   const unauthRole = resources.unauthRole;
+
   const basePolicies = Array.isArray(unauthRole.policies)
     ? unauthRole.policies
     : [unauthRole.policies];
@@ -36,4 +37,5 @@ export function override(resources: AmplifyRootStackTemplate) {
       policyName: "amplifyLoggerCWLogsPolicy",
     },
   ];
+  console.log("unauthRole", unauthRole);
 }
