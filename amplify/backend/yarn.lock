@@ -1049,9 +1049,9 @@ concat-map@0.0.1:
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
 constructs@^3.3.125, constructs@^3.3.69:
-  version "3.4.282"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.4.282.tgz#619a57979c9c06b6e42c8e816565ea4542e6a5ca"
-  integrity sha512-jV4b/Dn/fmhsMP2umDKvEjBS4b1Ics9+2nS+4WbiftAeq2Ip/YINTNBYjjvWMTUlEFBR2PTWr6uwM94+6DHSHQ==
+  version "3.4.283"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.4.283.tgz#77ab60e716f1d8d27b3bdef48f0db3d3635bf8fe"
+  integrity sha512-MbyKsSXAMGjX1lF6hjKY4Q3Lo6O2OyNHN+Qc0uKbH7InCQ/t5RemgPPZ88jfPgWXnnHOwFaO46SVug7LUb5KMw==
 
 core-util-is@~1.0.0:
   version "1.0.3"
