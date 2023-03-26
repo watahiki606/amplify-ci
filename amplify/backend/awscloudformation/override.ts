@@ -6,7 +6,7 @@ export function override(resources: AmplifyRootStackTemplate) {
   const basePolicies = Array.isArray(unauthRole.policies)
     ? unauthRole.policies
     : [unauthRole.policies];
-  unauthRole.roleName = "myCustomUnauthRole2";
+  unauthRole.roleName = "myCustomUnauthRole22222";
   unauthRole.policies = [
     ...basePolicies,
 
