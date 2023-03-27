@@ -38,5 +38,8 @@ export function override(resources: AmplifyRootStackTemplate) {
       policyName: "amplifyLoggerCWLogsPolicy",
     },
   ];
-  console.log("unauthRole", unauthRole.policies);
+  console.log(
+    "-------------------------------------------unauthRole",
+    unauthRole.policies
+  );
 }

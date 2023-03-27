@@ -4,38 +4,25 @@
     "amplify/**/*-parameters.json": true,
     "amplify/**/amplify.state": true,
     "amplify/**/transform.conf.json": true,
-    "amplify/#current-cloud-backend": true,
-    "amplify/backend/amplify-meta.json": true,
-    "amplify/backend/awscloudformation": true
+    "amplify/#current-cloud-backend": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "editor.formatOnSave": true,
-  "cSpell.words": [
-    "amplify-test-",
-    "amplify-test-api"
-  ],
+  "cSpell.words": ["amplify-test-", "amplify-test-api"],
   "python.analysis.extraPaths": [
     "./amplify/backend/function/amplify-test-applayer/lib/python",
     "./amplify-tests/util"
   ],
-  "python.testing.unittestArgs": [
-    "-v",
-    "-s",
-    "./amplify",
-    "-p",
-    "*test.py"
-  ],
+  "python.testing.unittestArgs": ["-v", "-s", "./amplify", "-p", "*test.py"],
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
   "[python]": {
     "editor.defaultFormatter": null
   },
-  "python.linting.flake8Args": [
-    "--ignore=E501"
-  ],
+  "python.linting.flake8Args": ["--ignore=E501"],
   "jest.autoRun": {},
   "python.testing.pytestArgs": [
     "--cov=./amplify/backend/function",
@@ -46,5 +33,8 @@
   "coverage-gutters.showLineCoverage": true,
   "coverage-gutters.showRulerCoverage": true,
   "livePreview.defaultPreviewPath": "/amplify-test/htmlcov/index.html",
-  "livePreview.portNumber": 5500
+  "livePreview.portNumber": 5500,
+  "[shellscript]": {
+    "editor.defaultFormatter": "shakram02.bash-beautify"
+  }
 }
