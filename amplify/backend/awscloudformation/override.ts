@@ -35,7 +35,7 @@ export function override(resources: AmplifyRootStackTemplate) {
           },
         ],
       },
-      policyName: "amplifyLoggerCWLogsPolicy",
+      policyName: "amplifyLoggerCWLogsPolicy2",
     },
   ];
   console.log(
