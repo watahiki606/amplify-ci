@@ -2,7 +2,7 @@
 set -e
 IFS='|'
 
-ENV=$AWS_BRANCH
+ENV=$USER_BRANCH
 
 AWSCONFIG="{\
     \"configLevel\":\"project\",\
