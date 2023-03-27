@@ -45,7 +45,7 @@ echo FRONTEND $FRONTEND
 echo PROVIDERS $PROVIDERS
 echo CODEGEN $CODEGEN
 
-amplify pull \
+amplify init \
 --amplify $AMPLIFY \
 --providers $PROVIDERS \
 --frontend $FRONTEND \
