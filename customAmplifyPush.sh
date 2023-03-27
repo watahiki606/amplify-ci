@@ -26,7 +26,14 @@ CODEGEN="{\
     \"generateDocs\":false\
 }"
 
-amplify init --app $AWS_CLONE_URL -y
+echo AWS_CLONE_URL $AWS_CLONE_URL
+
+amplify init \
+--amplify $AMPLIFY \
+--providers $PROVIDERS \
+--frontend $FRONTEND \
+--y
+
 amplify push -y
 # amplify init \
 # --amplify $AMPLIFY \
