@@ -1,6 +1,16 @@
 #!/bin/bash
 set -e
 IFS='|'
+
+ENV=$AWS_BRANCH
+
+AWSCONFIG="{\
+    \"configLevel\":\"project\",\
+    \"useProfile\":true,\
+    \"profileName\":\"default\",\
+    \"AmplifyAppId\":\"${AWS_APP_ID}\"\
+}"
+
 REACTCONFIG="{\
     \"SourceDir\":\"src\",\
     \"DistributionDir\":\"build\",\
