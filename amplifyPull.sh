@@ -2,37 +2,34 @@
 set -e
 IFS='|'
 REACTCONFIG="{\
-\"SourceDir\":\"src\",\
-\"DistributionDir\":\"build\",\
-\"BuildCommand\":\"npm run-script build\",\
-\"StartCommand\":\"npm run-script start\"\
-}"
-AWSCLOUDFORMATIONCONFIG="{\
-\"configLevel\":\"project\",\
-\"useProfile\":false,\
-\"accessKeyId\":\"$1\",\
-\"secretAccessKey\":\"$2\",\
-\"region\":\"$3\"\
+    \"SourceDir\":\"src\",\
+    \"DistributionDir\":\"build\",\
+    \"BuildCommand\":\"npm run-script build\",\
+    \"StartCommand\":\"npm run-script start\"\
 }"
 
-        
+
 AMPLIFY="{\
-\"projectName\":\"amplifytest\",\
-\"appId\":\"d3h268v90nd38j\",\
-\"envName\":\"dev\",\
-\"defaultEditor\":\"code\"\
+    \"envName\":\"${ENV}\",\
+    \"appId\":\"${AWS_APP_ID}\"\
 }"
 FRONTEND="{\
-\"frontend\":\"javascript\",\
-\"framework\":\"react\",\
-\"config\":$REACTCONFIG\
+    \"frontend\":\"javascript\",\
+    \"framework\":\"react\",\
+    \"config\":$REACTCONFIG\
 }"
 PROVIDERS="{\
-\"awscloudformation\":$AWSCLOUDFORMATIONCONFIG\
+    \"awscloudformation\":${AWSCONFIG}\
+}"
+CODEGEN="{\
+    \"generateCode\":false,\
+    \"generateDocs\":false\
 }"
 
-amplify pull \
---amplify $AMPLIFY \
---frontend $FRONTEND \
---providers $PROVIDERS \
---yes
+amplify init --app $AWS_CLONE_URL -y
+amplify push -y
+# amplify init \
+# --amplify $AMPLIFY \
+# --providers $PROVIDERS \
+# --codegen $CODEGEN \
+# --yes
